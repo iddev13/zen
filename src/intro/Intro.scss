@@ -1,0 +1,95 @@
+@import "../index.scss";
+
+.Intro {
+	width: 100%;
+	height: 100vh;
+	&__inner {
+		width: 100%;
+		height: 100vh;
+		@include flex;
+		align-items: center;
+	}
+	&__content {
+		flex: 0 0 50%;
+		@include flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		text-align: left;
+	}
+	&__image {
+		flex: 0 0 50%;
+		max-width: 585px;
+		min-height: 546px;
+		position: relative;
+		overflow: hidden;
+		// @media (min-width: 1440px) {
+		// 	margin-top: 100px;
+		// }
+		@media (max-width: 580px) {
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.8);
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 3;
+			}
+		}
+		@media (max-width: 374px) {
+			margin-top: -100px;
+		}
+
+		& img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: contain;
+			font-family: "object-fit: contain;";
+		}
+	}
+	&__title {
+		font-family: "Nunito", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		color: $black;
+		max-width: 480px;
+		width: 100%;
+		margin-top: -100px;
+		@include adaptiv-value("font-size", 36, 26, 0);
+		@include adaptiv-value("line-height", 43, 35, 0);
+		@include adaptiv-value("margin-bottom", 14, 7, 0);
+		@media (max-width: 992px) {
+			max-width: 450px;
+		}
+	}
+	&__suptitle {
+		@include flex;
+		align-items: center;
+		@include adaptiv-value("margin-bottom", 33, 15, 0);
+		max-width: 450px;
+		width: 100%;
+		// & a {
+		// 	margin-right: 8px;
+		// }
+		// & span {
+		// 	display: inline-block;
+		// }
+	}
+	&__text {
+		font-family: inherit;
+		font-style: normal;
+		font-weight: 400;
+		max-width: 450px;
+		width: 100%;
+		font-size: 18px;
+		@include adaptiv-value("line-height", 26, 23, 0);
+		color: $black;
+		margin-bottom: 12px;
+	}
+}

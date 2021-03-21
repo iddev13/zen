@@ -1,0 +1,20 @@
+@import "../index.scss";
+
+.LinkApp {
+	& ul {
+		@include flex;
+		flex-direction: column;
+	}
+	& li:not(:last-child) {
+		margin-bottom: 10px;
+	}
+	&--row {
+		& ul {
+			@include flex;
+			flex-direction: row;
+		}
+		& li:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+}

@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './app/App';
 import reportWebVitals from './reportWebVitals';
+
+let nav = { zenefits: '/zenefits', features: '/features', pricing: '/pricing' };
+let navLeft = { personal: '/personal', business: '/business', };
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App nav={nav} navLeft={navLeft} />
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -15,3 +18,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
